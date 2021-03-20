@@ -1,6 +1,6 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
+import 'question.dart';
 
 void main() => runApp(MyApp());
 
@@ -35,17 +35,18 @@ class _MyAppState extends State<MyApp> {
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(questions[questionIndex]),
+            Question(questions[questionIndex]),
             RaisedButton(
               child: Text('Answer 1'),
               onPressed: answerQuestion,
             ),
             RaisedButton(
-              child: Text('Answer 1'),
+              child: Text('Answer 2'),
               onPressed: () {},
             ),
-            Container(
-              child: Platform.isIOS ? Text('Мы в ИОС') : Text('Мы в Андроид'),
+            RaisedButton(
+              child: Text('Answer 3'),
+              onPressed: () {},
             ),
           ],
         ),
